@@ -170,15 +170,12 @@ static UIView *_placeholderView;
 }
 
 - (BOOL) textFieldShouldReturn:(UITextField *)textField {
-    if ([textField.text length] > 0) {
-        if([_delegate respondsToSelector:@selector(didReturnKeyPressedWithText:)]){
-            [_delegate didReturnKeyPressedWithText:textField.text];
-        }
-        [_mytextField resignFirstResponder];
-        [_mytextField setText:@""];
-        return YES;
+    if([_delegate respondsToSelector:@selector(didReturnKeyPressedWithText:)]){
+        [_delegate didReturnKeyPressedWithText:textField.text];
     }
-    return NO;
+    [_mytextField resignFirstResponder];
+    [_mytextField setText:@""];
+    return YES;
 }
 
 
