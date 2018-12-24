@@ -10,7 +10,7 @@
 
 @implementation TZKeyboardPop
 
-@synthesize UITextField *_mytextField;
+@synthesize *_mytextField;
 static UIView *_placeholderView;
 
 - (TZKeyboardPop *) initWithView:(UIView *)view {

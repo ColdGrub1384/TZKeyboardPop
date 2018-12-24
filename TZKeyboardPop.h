@@ -24,7 +24,6 @@
 @interface TZKeyboardPop : NSObject <UITextFieldDelegate> {
     UIView *currentView;
     UIView *tapToDismissView;
-    UITextView *_mytextField;
 }
 
 @property (nonatomic, weak) id<TZKeyboardPopDelegate> delegate;
@@ -38,5 +37,7 @@
 - (void) setTextFieldTintColor:(UIColor *)color;
 
 - (void) showKeyboard;
+    
+@property UITextField *_mytextField;
 
 @end
