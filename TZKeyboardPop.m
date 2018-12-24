@@ -18,7 +18,7 @@ static UIView *_placeholderView;
     
     tapToDismissView = [[UIView alloc] initWithFrame:view.frame];
     [tapToDismissView setAlpha:0.f];
-    [tapToDismissView setBackgroundColor:[UIColor colorWithWhite:0.f alpha:0.5]];
+    [tapToDismissView setBackgroundColor:[UIColor colorWithWhite:0.f alpha:0]];
     UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(dismissCustomKeyboard:)];
     [tapToDismissView addGestureRecognizer:tap];
     
